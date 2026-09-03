@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "sass:list";
+
+@use "../tokens/fonts" as *;
+
+@mixin font-face($family, $font-file-path, $weight: 400, $exts: $font-exts) {
+  @font-face {
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+
+    $src: ();
+    @each $ext in $exts {
+      $format: map.get($font-formats, $ext);
+      $src: list.append(
+        $src,
+        url("#{$font-file-path}-#{$weight}.#{$ext}") format("#{$format}"),
+        $separator: comma
+      );
+    }
+    src: $src;
+  }
+}

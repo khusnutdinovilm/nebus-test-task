@@ -1,0 +1,15 @@
+$font-dir: "/fonts";
+
+$font-formats: (
+  "woff2": "woff2",
+  "woff": "woff",
+  "ttf": "truetype",
+  "otf": "opentype",
+);
+
+$font-exts: ("woff2", "woff", "ttf", "otf");
+
+$font-name-inter: "Inter";
+$font-dir-inter: "Inter";
+$font-file-name-inter: "Inter";
+$font-path-inter: "#{$font-dir}/#{$font-dir-inter}/#{$font-file-name-inter}";

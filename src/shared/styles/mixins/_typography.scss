@@ -1,0 +1,64 @@
+@use "../tokens/typography" as *;
+
+@mixin typography($family, $size, $height, $weight: 400) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin inter-typography($size, $height, $weight: 400) {
+  @include typography($font-family-base, $size, $height, $weight);
+}
+
+// // Text xs/Medium
+@mixin text-xs-medium {
+  @include inter-typography($font-size-text-xs, $line-height-text-xs, 500);
+}
+
+// // Text sm/Regular
+@mixin text-sm-regular {
+  @include inter-typography($font-size-text-sm, $line-height-text-sm);
+}
+
+// // Text sm/Medium
+@mixin text-sm-medium {
+  @include inter-typography($font-size-text-sm, $line-height-text-sm, 500);
+}
+
+// // Text md/Regular
+@mixin text-md-regular {
+  @include inter-typography($font-size-text-md, $line-height-text-md);
+}
+
+// // Text md/Medium
+@mixin text-md-medium {
+  @include inter-typography($font-size-text-md, $line-height-text-md, 500);
+}
+
+// // Text md/Semibold
+@mixin text-md-semibold {
+  @include inter-typography($font-size-text-md, $line-height-text-md, 600);
+}
+
+// // Text lg/Medium
+@mixin text-lg-medium {
+  @include inter-typography($font-size-text-lg, $line-height-text-lg, 500);
+}
+
+// // Text lg/Semibold
+@mixin text-lg-semibold {
+  @include inter-typography($font-size-text-lg, $line-height-text-lg, 600);
+}
+
+// // Display xs/Semibold
+@mixin display-xs-semibold {
+  @include inter-typography($font-size-display-xs, $line-height-display-xs, 600);
+  letter-spacing: $letter-spacing-display-xs;
+}
+
+// // Display lg/Semibold
+@mixin display-lg-semibold {
+  @include inter-typography($font-size-display-lg, $line-height-display-lg, 600);
+  letter-spacing: $letter-spacing-display-lg;
+}

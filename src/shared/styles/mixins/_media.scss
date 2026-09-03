@@ -1,0 +1,40 @@
+@use "sass:map";
+
+@use "../tokens/breakpoints" as *;
+
+@function breakpoint($name) {
+  @if not map.has-key($breakpoints, $name) {
+    @error "Брейкпоинт '#{$name}' не найден в $breakpoints.";
+  }
+  @return map.get($breakpoints, $name);
+}
+
+@mixin media-up($name) {
+  @media (min-width: breakpoint($name)) {
+    @content;
+  }
+}
+
+@mixin media-down($name) {
+  @media (max-width: (breakpoint($name) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin media-between($lower, $upper) {
+  @media (min-width: breakpoint($lower)) and (max-width: (breakpoint($upper) - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin hidden-up($name) {
+  @include media-up($name) {
+    display: none;
+  }
+}
+
+@mixin hidden-down($name) {
+  @include media-down($name) {
+    display: none;
+  }
+}

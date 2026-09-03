@@ -1,0 +1,45 @@
+@use "./colors" as *;
+
+$theme-backdrop: $grey-100;
+$theme-background: $grey-50;
+$theme-surface-background: $white;
+$theme-stroke: $grey-300;
+$theme-surface-stroke: $grey-200;
+$theme-heading-foreground: $grey-900;
+$theme-foreground: $grey-800;
+$theme-muted-foreground: $grey-400;
+$theme-link-foreground: $blue-600;
+$theme-link-hover-foreground: $blue-700;
+$theme-overlay: $grey-alpha-40;
+
+$primary-background: $blue-600;
+$primary-hover: $blue-700;
+$primary-active: $blue-800;
+$primary-inverted: $white;
+$primary-hover-inverted: $white;
+$primary-focus: $blue-alpha-24;
+
+$semantic-success-background: $green-600;
+$semantic-success-hover: $green-700;
+$semantic-success-active: $green-800;
+$semantic-success-inverted: $white;
+$semantic-success-hover-inverted: $white;
+
+$semantic-error-background: $red-500;
+$semantic-error-hover: $red-600;
+$semantic-error-active: $red-700;
+$semantic-error-inverted: $white;
+$semantic-error-hover-inverted: $white;
+$semantic-error-focus: $red-alpha-24;
+
+$semantic-warning-background: $yellow-500;
+$semantic-warning-hover: $yellow-600;
+$semantic-warning-active: $yellow-600;
+$semantic-warning-inverted: $grey-900;
+$semantic-warning-hover-inverted: $grey-900;
+
+$semantic-success-alpha: $green-alpha-12;
+$semantic-error-alpha: $red-alpha-12;
+$semantic-warning-alpha: $yellow-alpha-15;
+
+$border-hairline: 1px solid $theme-stroke;

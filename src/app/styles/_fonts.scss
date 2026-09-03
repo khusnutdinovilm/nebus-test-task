@@ -1,0 +1,6 @@
+@use "../../shared/styles/tokens/fonts" as *;
+@use "../../shared/styles/mixins/fonts" as *;
+
+@each $weight in (400, 500, 600) {
+  @include font-face($font-name-inter, $font-path-inter, $weight, ("woff2", "woff", "ttf"));
+}

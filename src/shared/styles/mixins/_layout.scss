@@ -1,0 +1,13 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
