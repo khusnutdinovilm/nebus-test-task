@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     typeCheck: false,
   },
 
+  components: false,
+
   dir: {
     pages: "app/routes",
     layouts: "app/layouts",
@@ -29,7 +31,7 @@ export default defineNuxtConfig({
 
   css: ["@app/styles/main.scss"],
 
-  modules: ["@nuxt/eslint", "@pinia/nuxt"],
+  modules: ["@nuxt/eslint", "@pinia/nuxt", "@nuxt/icon"],
 
   alias: {
     "@app": fileURLToPath(new URL("./src/app", import.meta.url)),
@@ -38,6 +40,16 @@ export default defineNuxtConfig({
     "@features": fileURLToPath(new URL("./src/features", import.meta.url)),
     "@entities": fileURLToPath(new URL("./src/entities", import.meta.url)),
     "@shared": fileURLToPath(new URL("./src/shared", import.meta.url)),
+  },
+
+  icon: {
+    provider: "none",
+    customCollections: [
+      {
+        prefix: "my",
+        dir: "./src/shared/assets/icons",
+      },
+    ],
   },
 
   vite: {
