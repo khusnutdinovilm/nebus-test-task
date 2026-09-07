@@ -1,10 +1,16 @@
 <template>
   <div class="layout">
-    <main class="layout__content">
-      <slot></slot>
-    </main>
+    <site-header class="layout__header" />
+
+    <slot></slot>
+
+    <div id="modals"></div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { SiteHeader } from "@widgets/site-header";
+</script>
 
 <style lang="scss">
 .layout {
@@ -12,7 +18,7 @@
   display: flex;
   flex-direction: column;
 
-  &__content {
+  & main {
     flex: 1;
   }
 }
