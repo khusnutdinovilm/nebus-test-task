@@ -9,3 +9,30 @@ body {
 body {
   background-color: $theme-heading-foreground;
 }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $spacing-5;
+  padding-right: $spacing-5;
+
+  @include media-up("sm") {
+    max-width: 540px;
+  }
+
+  @include media-up("md") {
+    max-width: 720px;
+  }
+
+  @include media-up("lg") {
+    max-width: 960px;
+  }
+
+  @include media-up("xl") {
+    max-width: 1140px;
+  }
+
+  @include media-up("xxl") {
+    max-width: 1320px;
+  }
+}
